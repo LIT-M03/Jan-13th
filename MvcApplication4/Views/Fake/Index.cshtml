@@ -1,0 +1,20 @@
+﻿@using DataLayer;
+@model IEnumerable<Category>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Link</th>
+    </tr>
+    @foreach (Category c in Model)
+    {
+        <tr>
+            <td>@c.Id</td>
+            <td>@c.Name</td>
+            <td>
+                <a class="btn btn-success" href="/fake/products?pid=@c.Id">View Products</a>
+            </td>
+        </tr>   
+    }
+</table>

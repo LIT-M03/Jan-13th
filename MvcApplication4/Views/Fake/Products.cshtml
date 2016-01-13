@@ -1,0 +1,18 @@
+﻿@using DataLayer;
+@model MvcApplication4.Models.ProductsViewModel
+
+<h3>Products for category: @Model.Category.Name</h3>
+
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    @foreach (Product p in Model.Products)
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+        </tr>
+    }
+</table>
